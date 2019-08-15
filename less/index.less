@@ -57,12 +57,17 @@ table {
 	margin: 2% 2%;
 }
 
+.display-flex{
+	display: flex;
+	justify-content: space-between;
+}
+
 * {
     box-sizing: border-box;
 }
 html{
 	font-size: 62.5%;
-	border: 5px solid rgb(212, 22, 22);
+	border: 5px solid yellow;
 	margin: 5%;
 }
 
@@ -70,29 +75,27 @@ body {
 	height: 100%;
 	font-family: 'Questrial', sans-serif;
 	margin: 5%;
-	background: gold;
+	background: paleyellow;
 
 	
 }
 nav{
-	display: flex;
-	justify-content: space-between;
+	.display-flex();
 	a{
 		text-decoration: none;
-		font-size: @med-font;s
+		font-size: @med-font;
 		padding: 2% 0;
 	}
 		@media screen and (max-width: 500px){
 			flex-direction: column;
 			align-items: center;
 			.space-around();
+			justify-content: center;
 		}
 }
-// nav a:hover{
-// 	color: white;
-// }
 
-h1, h2, h3{
+
+h1, h2{
 	color: @white-font;
 	font-family: 'Concert One', cursive;
 	padding: 3% 0;
@@ -102,54 +105,65 @@ h1{
 	text-align: center;
 }
 .about img {
-	width: 80vw;
-	height: 16vh;
-	}
+	width: 76vw;
+	height: 24vh;
 	
+	}
+
 .about	p{
 		.space-around();
 		font-size: @med-font;
 	}
-
+#main-content img {
+	width: 25vw;
+	height: 25vh;
+}
 h2{
 	font-size: @large-font;
 
 }
+
 ul{
 	font-size: @med-font;
+	line-height: 1.5;
+	// padding: 0 2%;
 }
+h3{
+	color: black;
+	font-family: 'Concert One', cursive;
 
+}
 #main-content{
-	display: flex;
+	.display-flex();
+	flex-wrap: wrap;
 	width: 100%;
-	justify-content: space-between;
-	align-items: flex-start;
 
-	#work{
-		.space-around();
-		
+	div{
+		width: 45%;
 	}
+		
 	@media screen and (max-width: 500px){
-		flex-direction: column;
 		align-items: center;
-		justify-items: center;
-	
+		justify-content: center;
 	}
 }
+
 #contact{
 	font-size: 1.5rem;
 	width: 35%;
 }
 #big-box{
-	display: flex;
+	.display-flex();
 	align-items: center;
 	#work-box #work{
 		width: 85%;
 	}
 
 }
+#work-content #work {
+	font-size: @med-font;
+}
 footer{
-
 	address{
 		font-size: @med-font;
 	}

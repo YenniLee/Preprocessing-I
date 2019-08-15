@@ -130,19 +130,23 @@ table {
   padding: 0 4%;
   margin: 2% 2%;
 }
+.display-flex {
+  display: flex;
+  justify-content: space-between;
+}
 * {
   box-sizing: border-box;
 }
 html {
   font-size: 62.5%;
-  border: 5px solid #d41616;
+  border: 5px solid yellow;
   margin: 5%;
 }
 body {
   height: 100%;
   font-family: 'Questrial', sans-serif;
   margin: 5%;
-  background: gold;
+  background: paleyellow;
 }
 nav {
   display: flex;
@@ -151,7 +155,7 @@ nav {
 nav a {
   text-decoration: none;
   font-size: 2rem;
-  spadding: 2% 0;
+  padding: 2% 0;
 }
 @media screen and (max-width: 500px) {
   nav {
@@ -159,11 +163,11 @@ nav a {
     align-items: center;
     padding: 0 4%;
     margin: 2% 2%;
+    justify-content: center;
   }
 }
 h1,
-h2,
-h3 {
+h2 {
   color: dodgerblue;
   font-family: 'Concert One', cursive;
   padding: 3% 0;
@@ -173,35 +177,42 @@ h1 {
   text-align: center;
 }
 .about img {
-  width: 80vw;
-  height: 16vh;
+  width: 76vw;
+  height: 24vh;
 }
 .about p {
   padding: 0 4%;
   margin: 2% 2%;
   font-size: 2rem;
 }
+#main-content img {
+  width: 25vw;
+  height: 25vh;
+}
 h2 {
   font-size: 3rem;
 }
 ul {
   font-size: 2rem;
+  line-height: 1.5;
+}
+h3 {
+  color: black;
+  font-family: 'Concert One', cursive;
 }
 #main-content {
   display: flex;
-  width: 100%;
   justify-content: space-between;
-  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
 }
-#main-content #work {
-  padding: 0 4%;
-  margin: 2% 2%;
+#main-content div {
+  width: 45%;
 }
 @media screen and (max-width: 500px) {
   #main-content {
-    flex-direction: column;
     align-items: center;
-    justify-items: center;
+    justify-content: center;
   }
 }
 #contact {
@@ -210,10 +221,14 @@ ul {
 }
 #big-box {
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 #big-box #work-box #work {
   width: 85%;
+}
+#work-content #work {
+  font-size: 2rem;
 }
 footer address {
   font-size: 2rem;
